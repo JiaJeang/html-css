@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 属性选择器 */
+
+    /* 必须要有value属性 */
+    input[value] {
+        color: red;
+        border: 1px solid red;
+    }
+
+    /* 可以选择type属性值 */
+    /* 只能选择type属性值为text的元素 */
+    input[type="text"] {
+        width: 200px;
+        height: 30px;
+    }
+
+    /* 只能选择class属性值以item开头的元素 */
+    ul li[class^="item"] {
+        color: blue;
+    }
+
+    /* 只能选择class属性值以0结尾的元素 */
+    ul li[class$="0"] {
+        color: green;
+    }
+
+    /* 只能选择class属性值包含item的元素 */
+    /* li[class*="item"] {
+        color: pink;
+    } */
+
+
+    /* 结构伪类选择器 */
+
+    /* -nth-child() 和 -nth-of-type() 类似 */
+    /* 区别: */
+    /* -nth-child() 选择所有子元素 如果与父元素类型相同 则选择第n个元素 否则不选择 */
+    /* -nth-of-type() 选择指定类型的子元素 */
+
+    /* 只能选择第一个子元素 */
+    ol li:first-child {
+        color: red;
+    }
+
+    /* 只能选择最后一个子元素 */
+    ol li:last-child {
+        color: pink;
+    }
+
+    /* 只能选择第n个子元素 n为全选 */
+    /* even 偶数 */
+    /* odd 奇数 */
+    /* n可以为数字 也可以为公式 算式如:2n 2n-1 -n+5 */
+    /* n必须在前面 */
+
+    ol li:nth-child(2n+1) {
+        color: blue;
+    }
+
+    /* 图片模糊 */
+     img {
+        width: 200px;
+        height: 200px;
+        /* 模糊效果 */
+        filter: blur(3px);
+    }
+    img:hover {
+        filter: blur(0px);
+    }
+</style>
+
+<body>
+    <!-- 属性选择器 -->
+    <input type="text" value="请输入用户名" placeholder="请输入用户名">
+    <input type="text" placeholder="请输入用户名">
+    <input type="password" placeholder="请输入密码">
+
+    <ul>
+        <li class="item1">111</li>
+        <li class="item2">222</li>
+        <li class="item3">333</li>
+        <li class=".item40">444</li>
+        <li class=".item50">555</li>
+    </ul>
+
+    <ol>
+        <li class="item1">111</li>
+        <li class="item2">222</li>
+        <li class="item3">333</li>
+        <li class=".item40">444</li>
+        <li class=".item50">555</li>
+    </ol>
+
+    <!-- 图片模糊 -->
+     <img src="./images/001.jpg" alt="">
+
+</body>
+
+</html>

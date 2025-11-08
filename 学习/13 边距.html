@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>盒子边框</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            /* 清除所有内外边距 */
+        }
+
+        /*调整表格宽度*/
+        table {
+            width: 700px;
+            height: 150px;
+            text-align: center;
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 0 auto;
+            /* border-collapse: collapse; 合并边框重合部分 */
+        }
+
+        .nva {
+            background-color: purple;
+            height: 200px;
+            width: 200px;
+            padding-left: 20px;
+            /* padding内边距设置 top right bottom left */
+            /* 也可以直接写像素单位边框->padding.png */
+            border: 100px solid black;
+            margin: 0 auto;
+            /* margin: 0 auto; 使盒子水平居中 */
+            /* 只要左右margin设置为auto 就可以使盒子水平居中 */
+        }
+
+        span {
+            height: 200px;
+            width: 200px;
+            color: rgb(0, 0, 255);
+            background-color: #3c3c3c;
+            display: inline-block;
+        }
+
+        .wai {
+            margin-left: 200px;
+            /* 行内元素和行内块元素水平居中必须设置父元素text-align: center; */
+            color: rgb(255, 0, 0);
+            /* margin外边距设置 top right bottom left */
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" align="center" cellspacing="0">
+        <caption>
+            课程表
+        </caption>
+        <tr>
+            <th>星期一</th>
+            <th>星期二</th>
+            <th>星期三</th>
+            <th>星期四</th>
+            <th>星期五</th>
+            <th>星期六</th>
+            <th>星期天</th>
+        </tr>
+        <tr>
+            <td>数学</td>
+            <td>数学</td>
+            <td>数学</td>
+            <td>数学</td>
+            <td>数学</td>
+        </tr>
+    </table>
+    <p class="nva">qwe</p><br>
+    <span>123</span>
+    <span class="wai">456</span>
+
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+
+
+
+
+
+
+
+
+/* 伪元素清除浮动 */
+/* 给父元素添加 clearfix 类名,即可清除子元素的浮动 */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: block;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* IE6、7 专有 */
+/* .clearfix { 
+    *zoom: 1;
+} */

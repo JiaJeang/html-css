@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box</title>
+</head>
+<style>
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        border-color: black;
+        border-width: 10px;
+        /* 边框的粗细 */
+        border-style: solid;
+        /* 边框的样式 solid实线 dashed虚线 dotted点线 */
+        border-radius: 10px;
+        /* 圆角 可以用% 可以分别设置写四角的圆角值 */
+        /* 可以为每个角设置不同的圆角 */
+        /* border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; */
+    }
+
+    p {
+        box-sizing:border-box;
+        /* 不让边框增加盒子的总尺寸 */
+        width: 200px;
+        height: 200px;
+        border: 10px solid red;
+        /* border: border-width border-style border-color */
+        /* 简写 没有顺序 */
+
+    }
+
+    .diy {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        border-top: 1px solid transparent;
+        /* transparent 透明 */
+        /* 层叠性 */
+        font-size: 28px;
+        padding: 10px;
+        /* 内边距防止内容贴边 */
+        box-sizing: border-box;
+        /* 确保padding不增加盒子总尺寸 */
+        overflow: auto;
+        /* 溢出时显示滚动条 */
+        word-break: break-all;
+        /* 允许数字换行 */
+    }
+
+    /* box-sizing 盒子模型 */
+
+    /* box-sizing:content-box(默认值) 内容盒子模型 */
+    /* 宽度和高度只包含内容的宽度和高度 */
+    /* 内边距和边框会增加盒子的总尺寸 */
+
+    /* box-sizing:border-box 边框盒子模型 */
+    /* 宽度和高度包含内容的宽度和高度 内边距和边框不会增加盒子的总尺寸 */
+
+</style>
+
+<body>
+    <div class="box"></div>
+    <p></p>
+    <div class="diy">123123123123123123123123123123123123</div>
+</body>
+
+</html>

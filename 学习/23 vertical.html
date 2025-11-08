@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        width: 200px;
+        height: 200px;
+    }
+    img, 
+    textarea {
+        /* vertical-align: baseline(默认)/middle/top/bottom ; */
+        /* 实现文字与图片或者行内块元素垂直居中对齐 middle */
+        /* 只要不是与基线对齐 也可以解决图片下面有空隙的问题 */
+
+        vertical-align: middle;
+    }
+    span {
+        font-size: 38px;
+    }
+    div {
+        border: 1px solid red;
+    }
+</style>
+
+<body>
+    <img src="./images/精灵图.png" alt="">
+    <span>精灵图</span>
+    <br>
+    <textarea cols="30" rows="10" placeholder="请输入内容"></textarea>Hello
+    <div>
+        <img src="./images/精灵图.png" alt="">
+    </div>
+    
+</body>
+</html>

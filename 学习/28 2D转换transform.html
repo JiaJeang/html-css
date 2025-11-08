@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转换transform</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    div:nth-child(-n+2) {
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        background-color: pink;
+        /* transform: translate(100px, 100px); */
+    }
+
+    div:nth-child(3) {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+
+    /* transform:translate 移动 不会改变其他元素的位置 对行内元素无效 值可以是像素或百分比 */
+    /* 百分比 是相对于元素自身的宽度和高度 */
+    div:nth-child(1):hover {
+        transform: translate(100px, 100px);
+    }
+
+    p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(92, 92, 92);
+        /* 让元素居中心  */
+        /* margin-top: -25px;
+        margin-left: -25px; */
+        /* 要清除元素的默认外边距 */
+        transform: translate(-50%, -50%);
+
+    }
+
+    div:nth-child(2) {
+        background-image: url(./images/001.jpg);
+        border-radius: 50%;
+        transition: all 3s;
+    }
+
+    /* 旋转 transform: rotate 单位是deg 默认顺时针 */
+    div:nth-child(2):hover {
+        transform: rotate(720deg);
+    }
+
+    /* 旋转中心 transform-origin  可以设置旋转中心  可以是像素 也可以是百分比  也可以是方位名词
+    默认是元素的中心*/
+    div:nth-child(3) {
+        transition: all 2s;
+        transform-origin: right top;
+    }
+
+    div:nth-child(2):hover+div:nth-child(3),
+    div:nth-child(3):hover {
+        transform: rotate(360deg);
+    }
+
+    /* 缩放 transform: scale(x,y) 单位是倍数 默认是1 没有单位 */
+    /* 不会改变其他元素的位置 */
+    /* 可以设置缩放中心 transform-origin */
+    div:nth-child(4) {
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        background-color: pink;
+        transition: all 1s;
+    }
+
+    div:nth-child(4):hover {
+        transform: scale(2, 0.5);
+        /* transform-origin: left top; */
+    }
+
+    /* 可以综合使用  顺序改变影响结果 */
+    /* transform: translate(100px, 100px) rotate(360deg) scale(2, 0.5); */
+
+</style>
+
+<body>
+    <div></div>
+    <div></div>
+    <div>
+        <p></p>
+    </div>
+    <div></div>
+</body>
+
+</html>

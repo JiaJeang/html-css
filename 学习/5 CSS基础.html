@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS基础</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- 外部样式表 -->
+
+    <style>
+        /* CSS标签选择器 */
+        body {
+            background-color: lightblue;
+            font-size: 28px;
+        }
+
+        h1 {
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        p {
+            font-family: 楷体;
+            font-size: 20px;
+        }
+
+        /* CSS类选择器 可以调用多次*/
+        .red {
+            color: red;
+        }
+
+        .box {
+            font-size: 28px;
+        }
+
+        .green {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        /* CSS id选择器 只能调用一次*/
+        #red {
+            color: red;
+        }
+        /* 属性选择器 可以根据元素的属性来选择元素 */
+        input[type="text"] {
+            width: 200px;
+            height: 30px;
+        }
+        
+
+        /* CSS通配符 选择所有元素 */
+        * {
+            color: rgb(87, 87, 149);
+        }
+    </style>
+</head>
+
+<body font-family="Microsoft YaHei">
+    <h1>我的第一个CSS实例</h1>
+    <p>这是一个段落.</p>
+    <p class="red box">这是另一个段落.</p>
+    <ui>
+        <li>HTML</li>
+        <li class="red">CSS</li>
+        <li id="red">JavaScript</li>
+    </ui>
+    <div class="green"></div>
+    <div class="red">red</div>
+    <div>div</div>
+    <input type="text" placeholder="请输入用户名">
+    <input type="password" placeholder="请输入密码">
+
+</body>
+
+</html>

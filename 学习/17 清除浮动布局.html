@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动布局</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background-color: beige;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .top {
+        height: 100px;
+        background-color: pink;
+        margin-top: 80px;
+        text-align: center;
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    /* 添加到父元素清除浮动 */
+    .overflow {
+        overflow: hidden;
+    }
+
+    .padding {
+        height: 200px;
+        width: 1240px;
+        background-color: pink;
+        margin: 40px auto auto auto;
+        border-radius: 20px;
+    }
+
+    .bottom {
+        /* height: 300px; */
+        /* 后续可以方便添加其他元素 不用设置高度 直接清除浮动 */
+        width: 1240px;
+        background-color: beige;
+        margin: 40px auto auto auto;
+    }
+
+    .bottom li {
+        float: left;
+        height: 280px;
+        width: 300px;
+        background-color: pink;
+        margin: 10px auto auto 8px;
+        border-radius: 20px;
+    }
+
+    .footer {
+        height: 200px;
+        background-color: black;
+        margin-top: 200px;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        line-height: 200px;
+    }
+</style>
+
+<body>
+
+</body>
+<div class="top">top</div>
+<div class="padding">padding</div>
+<div class="bottom overflow">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>1</li>
+    </ul>
+</div>
+<div class="footer">footer</div>
+
+</html>

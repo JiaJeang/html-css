@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+
+    <!-- <link rel="stylesheet" href="link.css"> -->
+
+    <style>
+        /* a:link 选择所有未被访问的链接 */
+        /* a:visited 选择所有已被访问的链接 */
+        /* a:hover 选择鼠标悬停在链接上的状态 */
+        /* a:active 选择活动链接(鼠标按下未松开) */
+        /* 要按照 lvha 顺序写 */
+        a:link {
+            color: #333;
+
+        }
+
+        a:visited {
+            color: green;
+        }
+
+        a:hover {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        a:active {
+            color: blue;
+        }
+
+        /* input:focus 选择获得焦点的input元素 */
+        input:focus {
+            background-color: pink;
+            color: rgb(255, 0, 93);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <a href="https://www.baidu.com" target="_blank">百度</a>
+    <input type="text" size="28px">
+    <input type="text">
+    <input type="text">
+</body>
+
+</html>

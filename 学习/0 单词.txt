@@ -1,0 +1,58 @@
+style 风格
+align 排列
+italic 斜体
+
+password 密码
+submit 提交
+button 按钮
+option 挑选
+target 目标
+blank 空白
+indent 缩进
+
+height 高度
+weight 重量 //控制字体粗细程度
+width  宽度
+line  列
+position 位置
+bottom 底部
+fixed 固定
+important 重要的
+
+decoration 装饰
+underline  下划线
+hover 盘旋
+
+solid 实线
+bashed 虚线
+dotted 点线
+transparent 透明
+
+display 显示
+block 块
+
+radius 半径
+shadow 阴影
+
+clear 清除
+overflow-hidden 超出隐藏(清除浮动)
+
+static 静态
+relative 相对
+absolute 绝对
+fixed 固定
+
+transition 转换/过渡
+
+transform 转换
+
+top  顶部
+banner 显著的
+promo 广告
+padding 填充
+content 内容
+bottom 底部
+footer 页脚
+
+alert 警觉
+

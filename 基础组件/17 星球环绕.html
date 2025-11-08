@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    /*
+    * @Author: 大剑师兰特(xiaozhuanlan),还是大剑师兰特(CSDN)
+    * @此源代码版权归大剑师兰特所有,可供学习或商业项目中借鉴,未经授权,不得重复地发表到博客、论坛,问答,git等公共空间或网站中.
+    * @Email: 2909222303@qq.com
+    * @weixin: gis-dajianshi
+    * @First published in CSDN
+    * @First published time: 2023-11-09
+    */
+
+    <style scoped>
+        .container {
+            width: 1000px;
+            height: 580px;
+            margin: 50px auto;
+            border: 1px solid green;
+            position: relative;
+        }
+
+        .top {
+            margin: 0 auto 0px;
+            padding: 10px 0;
+            background: mediumvioletred;
+            color: #fff;
+        }
+
+        .box {
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+            position: relative;
+            padding: 1px;
+            height: 300px;
+            width: 300px;
+            margin-left: 200px;
+        }
+
+        .sunline {
+            position: relative;
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 50%;
+            margin: 50px 0 0 50px;
+            -webkit-animation: rotate 10s infinite linear;
+            animation: rotate 10s infinite linear;
+        }
+
+        .sun {
+            height: 100px;
+            width: 100px;
+            margin: 50% 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            background-color: red;
+            border-radius: 50%;
+            -webkit-box-shadow: 5px 5px 10px red, -5px -5px 10px red, 5px -5px 10px red, -5px 5px 10px red;
+            box-shadow: 5px 5px 10px red, -5px -5px 10px red, 5px -5px 10px red, -5px 5px 10px red;
+        }
+
+        .earthline {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            height: 200px;
+            width: 200px;
+            margin: -100px -100px 0 0;
+            border: 1px solid black;
+            border-radius: 50%;
+            -webkit-animation: rotate 2s infinite linear;
+            animation: rotate 2s infinite linear;
+        }
+
+        .earth {
+            margin: 50% 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            height: 50px;
+            width: 50px;
+            background-color: blue;
+            border-radius: 50%;
+        }
+
+        .moon {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            height: 20px;
+            width: 20px;
+            margin: -10px 0 0 -10px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        @-webkit-keyframes rotate {
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="top">
+            <h3>太阳、地球、月球的旋转</h3>
+            <div class="author">大剑师兰特, 还是大剑师兰特,gis-dajianshi</div>
+        </div>
+        <div class="box">
+            <div class="sunline">
+                <div class="sun"></div>
+                <div class="earthline">
+                    <div class="earth"></div>
+                    <div class="moon"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

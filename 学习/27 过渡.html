@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 谁做过渡给谁添加 */
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /* 过渡属性 过渡时间 过渡函数 过渡延迟 #后两个可以省略 */
+        transition: all 1s linear .5s;
+    }
+    div:hover {
+        width: 400px;
+        height: 400px;
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div></div>
+    <div></div>
+    
+</body>
+</html>

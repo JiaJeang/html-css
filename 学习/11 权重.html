@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权重</title>
+</head>
+<style>
+    .red {
+        color: red;
+    }
+
+    li {
+        color: pink;
+    }
+
+    /* 权重:行内样式 > id选择器 > 类选择器/伪类选择器 > 元素选择器/伪元素选择器 */
+    /* 继承权重为0 */
+    .temp dd {
+        color: red;
+    }
+
+    /* .temp */
+    .pink {
+        color: pink;
+        font-weight: 700;
+    }
+
+    /* 权重叠加 */
+</style>
+
+<body>
+    <ul class="red">
+        <li>123</li>
+        <li>456</li>
+        <li>789</li>
+    </ul>
+    <dl class="temp">
+        <dd class="pink">123</dd>
+        <dd>456</dd>
+        <dd>789</dd>
+    </dl>
+
+</body>
+
+</html>

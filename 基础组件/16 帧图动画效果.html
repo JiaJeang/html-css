@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帧图动画效果</title>
+</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #241f21;
+        }
+        div {
+            margin: 100px auto;
+            width: 118px;
+            height: 254px;
+            background-image: url(./images/机器人.jpg);
+            background-color: #fff;
+            animation: move 1s steps(6) infinite;  
+            box-shadow: 0 10px 20px 20px #fff;
+        }
+        @keyframes move {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: -600px 0;
+            }
+        }
+        p {
+            width: 167px;
+            height: 432px;
+            margin: 1px auto;
+            background-image: url(./images/卡通火动画帧.webp);
+            background-color: #fff;
+            animation: hot .5s steps(6) infinite;  
+        }
+        @keyframes hot {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: -11090px 0;
+            }
+        }
+    </style>
+<body>
+    <div></div>
+    <p></p>
+</body>
+</html>

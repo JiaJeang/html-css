@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .yi {
+        margin: 100px auto;
+        width: 200px;
+        height: 50px;
+        background-color: #f3f5f7;
+        /* 三步走 */
+        white-space: nowrap;
+        /* 强制一行显示 不换行 */
+        overflow: hidden;
+        /* 超出部分隐藏 */
+        text-overflow: ellipsis;
+        /* 显示省略号 */
+    }
+
+    /* 多行文本 第二行显示省略号 */
+    .er {
+        margin: 100px auto;
+        width: 200px;
+        height: 50px;
+        /* copy即可 */
+        background-color: #f3f5f7;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        /* -webkit-line-clamp: 2; */
+    }
+</style>
+
+<body>
+    <!-- 单行文本 -->
+    <div class="yi">
+        这是一个很长的文本,我们需要对其进行省略号处理.
+    </div>
+    
+    <!-- 多行文本 第二行显示省略号 -->
+    <div class="er">
+        这是一个很长很长很长很长的文本,我们需要对其进行省略号处理.
+    </div>
+</body>
+
+</html>

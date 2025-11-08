@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体样式</title>
+</head>
+<style>
+    .diy {
+        font-style: italic;
+        /* 斜体 */
+        /*normal 让字体还原 也是默认*/
+        font-weight: 700;
+        /* font-weight: bold; */
+        /* 字体加粗 两个都可以*/
+        /* font-weight:400 字体不加粗 */
+        /* italic 斜体 */
+        /*normal 让字体还原 */
+        font-size: 28px;
+        text-decoration: underline;
+        /* 装饰文本:underline下划线  
+            none取消下划线
+            可用与取消链接的下划线*/
+        color: blue;
+        /* 字体颜色 */
+        text-align: center;
+        /* 字体对齐方式 */
+        /* 可以让行内元素和行内块元素水平居中对齐 */
+        font-family: "Microsoft YaHei", sans-serif;
+        /* 常用在body里面*/
+
+        /* CSS中以font-开头的属性通常与字体相关
+        (如font-size、font-style、font-weight等)
+        文本颜色是独立的color属性,不属于font相关属性组 */
+    }
+
+    div {
+        /* font: font-style font-weight font-size/line-height font-family; */
+        /*复合属性 必须按顺序写 至少写font-size和font-family的值*/
+        font: italic 700 38px/40px "Microsoft YaHei";
+    }
+
+    a {
+        text-decoration: none;
+        color: red;
+        font-size: 30px;
+    }
+
+    p {
+        /* text-indent: 20px; */
+        text-indent: 2em;
+        /* em 相对单位 1em=当前元素的font-size */
+        /* 首行缩进 可以为负数*/
+        line-height: 30px;
+        /* 行高 */
+    }
+</style>
+
+<body>
+    <div class="diy">这是一个diy标签</div>
+    <div>这是另一个div标签</div>
+    <hr width="200" size="50" color="red">
+    <a href="https://www.baidu.com" target="_blank">百度</a>
+
+    <p>当今世界,和平与发展是各国人民的共同期盼,和平赤字、发展赤字、安全赤字、治理赤字有增无减.</p>
+
+    <p>在8月31日至9月1日举行的上合组织天津峰会上,习近平主席郑重提出全球治理倡议,旨在推动各国携手行动,构建更加公正合理的全球治理体系.这是继全球发展倡议、全球安全倡议、全球文明倡议之后,新时代中国向世界贡献的又一重要公共产品,为动荡不安的世界注入稳定性和确定性.
+    </p>
+
+    <p style="color:green; font-size:20px;">
+        <!-- 行内样式表 -->
+        从和平共处五项原则的"历史答案",到构建人类命运共同体的"时代答案",中国共产党始终以人类前途为怀、以人民福祉为念,把为人类作出新的更大贡献作为自己的使命.
+    </p>
+</body>
+
+</html>

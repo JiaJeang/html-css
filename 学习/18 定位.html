@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+</head>
+<style>
+    .box1 {
+        position: relative;
+        top: 100px;
+        left: 100px;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+
+    .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+
+    .box3 {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+    }
+
+    .fixed {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+    }
+</style>
+
+<body>
+    <!-- 静态定位 -->
+    <!-- position: static; -->
+    <!-- 是元素的默认定位方式 -->
+    <!-- 静态定位的元素不会被特殊定位 -->
+    <!-- 静态定位的元素的 top, right, bottom, left 属性无效 -->
+    <div class="box2"></div>
+
+    <!-- 相对定位 -->
+    <!-- position: relative; -->
+    <!-- 相对定位的元素的定位基准是元素的原始位置 -->
+    <!-- 不脱离标准流 原来的位置继续保留 -->
+    <!-- 子绝父相 -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <!-- 绝对定位 -->
+    <!-- position: absolute; -->
+    <!-- 绝对定位的元素的定位基准是最近的已定位祖先元素 -->
+    <!-- 如果没有已定位的祖先元素, 则定位基准是 body 元素 -->
+    <!-- 脱离标准流 原来的位置不会被保留 -->
+    <div class="box3"></div>
+    <div class="box2"></div>
+
+    <!-- 固定定位 -->
+    <!-- position: fixed; -->
+    <!-- 固定定位的元素的定位基准是浏览器窗口 -->
+    <!-- 脱离标准流 原来的位置不会被保留 -->
+    <div class="fixed">
+        <img src="images/001.jpg" alt="">
+    </div>
+    
+    <!-- 绝对定位和固定定位与浮动的性质类似 -->
+     <!-- 浮动元素不会压住下面标准流的文字 -->
+      <!-- 绝对定位和固定定位的元素可以压住下面标准流的所有 -->
+
+
+    <!-- z-index -->
+    <!-- z-index 属性指定元素的堆叠顺序 -->
+    <!-- z-index 属性值越大, 元素就越靠前 -->
+    <!-- z-index 属性值越小, 元素就越靠后 -->
+    <!-- z-index 属性值默认是 0 -->
+    <!-- z-index 属性值可以是负数 -->
+    <!-- z-index 属性值可以是小数 -->
+    <!-- z-index 属性值可以是百分比 -->
+    <!-- z-index 属性值可以是 auto -->
+    <!-- z-index 属性值可以是 inherit -->
+  
+
+</body>
+
+</html>

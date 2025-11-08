@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div,
+    span {
+        height: 200px;
+        width: 200px;
+        background-color: pink;
+        /* display: inline-block; */
+    }
+
+    p {
+        height: 200px;
+        background-color: red;
+    }
+
+    .box {
+        height: 400px;
+        width: 400px;
+        background-color: aquamarine;
+    }
+
+    /* 多块级元素纵向排列标准流  多块级元素横向排列浮动流 */
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    /* 可以解决行内块元素之间有空白缝隙的问题 */
+    .clear {
+        clear: both;
+    }
+</style>
+
+<body>
+    <div class="left">1</div>
+    <div class="box">2</div>
+    <!-- 浮动的元素会脱离标准流 -->
+    <!-- 不在保留原本位置 -->
+    <!-- 浮动的盒子只会影响后面的标准流盒子 不会影响前面的标准流盒子 -->
+
+    <div class="right">5</div>
+    <div class="right">6</div>
+    <span>span</span>
+    <span class="right">span</span>
+    <!-- 不管原来是什么模式,添加浮动后都具有行内块元素的特性 -->
+
+    <p class="left">
+        我是p标签
+    </p>
+    <!-- 块级元素没有设置宽度默认和父级元素一样宽 添加浮动后宽度会自适应内容 -->
+
+</body>
+
+</html>

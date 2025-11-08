@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./iconfont/iconfont.css">
+
+<style>
+    .iconfont {
+        font-size: 30px;
+        color: orange;
+    }
+
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+
+    div::before {
+        content: "这是前伪元素选择器";
+    }
+
+    div::after {
+        content: "这是后伪元素选择器";
+    }
+
+    li {
+        position: relative;
+        list-style: none;
+        width: 200px;
+        height: 40px;
+        background-color: #f3f5f7;
+    }
+
+    li::after {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        /*  阿里图标&#x改为\  */
+        content: "\e625";
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <!-- 伪元素默认是行内元素 -->
+    <!-- ::before 伪元素选择器 权重为001 -->
+    <!-- 可以在元素的内容前面插入内容 -->
+    <!-- ::after 伪元素选择器 -->
+    <!-- 可以在元素的内容后面插入内容 -->
+    <!-- 必须要设置 content 属性 -->
+    <div>000</div>
+    <!-- 可以节约代码量 -->
+    <ul>
+        <li class="iconfont "></li>
+    </ul>
+
+
+</body>
+
+</html>
