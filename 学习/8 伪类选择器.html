@@ -5,48 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>伪类选择器</title>
-
-    <!-- <link rel="stylesheet" href="link.css"> -->
-
     <style>
-        /* a:link 选择所有未被访问的链接 */
-        /* a:visited 选择所有已被访问的链接 */
-        /* a:hover 选择鼠标悬停在链接上的状态 */
-        /* a:active 选择活动链接(鼠标按下未松开) */
-        /* 要按照 lvha 顺序写 */
+        /* ========== 1. 链接伪类(LVHA 顺序:link → visited → hover → active/focus) ========== */
+        /* a:link - 未被访问过的链接 */
         a:link {
             color: #333;
-
         }
 
+        /* a:visited - 已被访问过的链接 */
         a:visited {
             color: green;
         }
 
+        /* a:hover - 鼠标悬停在链接上的状态 */
         a:hover {
             color: yellow;
             text-decoration: none;
         }
 
-        a:active {
-            color: blue;
+        /* a:focus - 链接获得焦点(比如按Tab键选中) */
+        a:focus {
+            color: red;
         }
 
-        /* input:focus 选择获得焦点的input元素 */
+        /* a:active - 链接被激活(鼠标按下未松开) */
+        .box:active {
+            color: blue;
+            background-color: #fff;
+        }
+
+        /* ========== 2. 表单伪类 ========== */
+        /* input:focus - 输入框获得焦点(点击/选中输入框) */
         input:focus {
             background-color: pink;
             color: rgb(255, 0, 93);
         }
+
+        /* input:checked - 复选框/单选框被选中的状态 */
+        input:checked {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* ========== 基础样式(非伪类,仅布局) ========== */
+        .box {
+            display: block;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(92, 92, 92);
+            margin: 100px auto;
+        }
     </style>
-
-
 </head>
 
 <body>
     <a href="https://www.baidu.com" target="_blank">百度</a>
-    <input type="text" size="28px">
+    <input type="text" size="28">
     <input type="text">
     <input type="text">
+    <input type="checkbox">
+    <a class="box" href="#"></a> <!-- 补充href,让链接伪类生效 -->
+    <a class="box" href="#"></a>
 </body>
 
 </html>

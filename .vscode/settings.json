@@ -37,6 +37,7 @@
     "trae.completion.enable": false,
     "trae.snippetSuggestions": "none",
     "trae.ai.completion.enabled": false,
-    "editor.mouseWheelZoom": true
+    "editor.mouseWheelZoom": true,
+    "liveServer.settings.port": 5501
     // ... existing code ...
 }

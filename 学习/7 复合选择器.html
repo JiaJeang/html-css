@@ -5,35 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>复合选择器</title>
+    <style>
+        /* 1. 后代选择器(空格分隔,选中所有后代元素) */
+        ul li {
+            color: pink;
+        }
+
+        ul li a {
+            color: red;
+        }
+
+        /* 2. 子选择器(>分隔,仅选中直接子元素) */
+        .i>a {
+            color: pink;
+        }
+
+        /* 3. 并集选择器(,分隔,同时选中多个选择器) */
+        div,
+        span,
+        .js {
+            color: pink;
+        }
+
+        /* 4. 相邻兄弟选择器(+分隔,选中紧接在指定元素后的第一个兄弟元素) */
+        .js+p {
+            color: blue;
+            /* 选中class为js的元素后面紧邻的p元素 */
+        }
+
+        /* 5. 通用兄弟选择器(~分隔,选中指定元素后所有同层级兄弟元素) */
+        h1~ul {
+            background-color: #f0f0f0;
+            /* 选中h1后面所有同层级的ul元素 */
+        }
+    </style>
 </head>
-<style>
-    /* 后代选择器 */
-    ul li {
-        color: pink
-    }
-
-    ul li a {
-        color: red;
-    }
-
-    /* 子选择器 */
-    .i>a {
-        color: pink
-    }
-
-    /* 并集选择器 */
-
-    /* div,
-    span {
-        color: pink;
-    } */
-
-    div,
-    span,
-    .js {
-        color: pink;
-    }
-</style>
 
 <body>
     <h1>复合选择器</h1>
@@ -57,6 +63,8 @@
     <div>html</div>
     <span>CSS</span>
     <p class="js">JavaScript</p>
+    <p>这是js后面的第一个p元素(相邻兄弟选择器生效)</p>
+    <p>这是js后面的第二个p元素(通用兄弟选择器对h1生效)</p>
 </body>
 
 </html>

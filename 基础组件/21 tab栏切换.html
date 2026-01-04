@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>纯CSS Tab栏切换</title>
+    <style>
+        /* 1. 隐藏单选框(仅用其状态,不显示) */
+        .tab-radio {
+            display: none;
+        }
+
+        /* 2. Tab 导航栏样式 */
+        .tab-nav {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 10px;
+        }
+
+        /* 3. Tab 按钮样式(默认未选中) */
+        .tab-btn {
+            padding: 8px 16px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px 4px 0 0;
+            cursor: pointer;
+        }
+
+        /* 4. 选中时的Tab按钮样式(关联单选框的:checked状态) */
+        .tab-radio:checked+.tab-btn {
+            background-color: #fff;
+            border-bottom-color: #fff;
+            /* 覆盖底部边框,和内容区衔接 */
+            font-weight: bold;
+        }
+
+        /* 5. Tab 内容区容器(默认隐藏所有内容) */
+        .tab-content {
+            display: none;
+            padding: 16px;
+            border: 1px solid #ddd;
+            border-radius: 0 4px 4px 4px;
+        }
+
+        /* 6. 显示对应选中的Tab内容(利用单选框的:checked + 兄弟选择器) */
+        #tab1:checked~.tab-content1,
+        #tab2:checked~.tab-content2,
+        #tab3:checked~.tab-content3 {
+            display: block;
+        }
+
+        /* 优化Tab按钮的下划线动画 */
+        .tab-btn {
+            position: relative;
+            /* 其他样式不变 */
+        }
+
+        .tab-radio:checked+.tab-btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #2196F3;
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab-container">
+        <!-- 单选框(隐藏,仅控制状态) -->
+        <input type="radio" name="tab" id="tab1" class="tab-radio" checked>
+        <label for="tab1" class="tab-btn">Tab1</label>
+
+        <input type="radio" name="tab" id="tab2" class="tab-radio">
+        <label for="tab2" class="tab-btn">Tab2</label>
+
+        <input type="radio" name="tab" id="tab3" class="tab-radio">
+        <label for="tab3" class="tab-btn">Tab3</label>
+
+        <!-- Tab内容区 -->
+        <div class="tab-content tab-content1">
+            这是Tab1的内容
+        </div>
+        <div class="tab-content tab-content2">
+            这是Tab2的内容
+        </div>
+        <div class="tab-content tab-content3">
+            这是Tab3的内容
+        </div>
+    </div>
+</body>
+
+</html>
