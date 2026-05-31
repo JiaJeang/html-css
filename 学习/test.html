@@ -1,77 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* .box{
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box{
             margin: 100px auto;
-            border: 1px solid #000;
-            height: 400px;
-        } */
-        .box {
-            margin: 0 auto;
-            width: 80%;
             /* border: 1px solid #000; */
-            display: flex;
-            justify-content: space-around;
-            /* gap: 100px; */
-
-        }
-
-        .item {
-            flex: 1;
+            background-color: #000;
             width: 300px;
-            height: 150px;
-            border-radius: 10px;
-            margin: 10px;
-            background-color: pink;
-            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+            gap: 20px;
         }
-
-        .item1 {
-            flex: 3;
+        li{
+            list-style: none;
+            height: 200px;
+            /* width: 100px; */
+            background-color: #fff;
         }
-
-        .inp {
-            border: 1px solid #000;
-            margin: 0 auto;
-            width: 400px;
-            height: 30px;
-            display: flex;
+        .item5{
+            border-radius: 10%;
         }
-
-        input {
-            flex: 10;
-            border: 0px;
-            padding-left: 20px;
-            outline: none;
-        }
-
-        span {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* border: 1px solid #000; */
+        .item7{
+            border-radius: 0 0 50% 0;
         }
     </style>
 </head>
-
 <body>
-    <div class="inp">
-        <input type="text">
-        <span>O</span>
-    </div>
-    <div class="box">
-        <div class="item item1">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-    </div>
-
+    <ul class="box">
+        <li class="item1"></li>
+        <li class="item2"></li>
+        <li class="item3"></li>
+        <li class="item4"></li>
+        <li class="item5"></li>
+        <li class="item6"></li>
+        <li class="item7"></li>
+        <li class="item8"></li>
+        <li class="item9"></li>
+    </ul>
 </body>
-
 </html>
